@@ -6,22 +6,22 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(../img/mobileDarkMode.svg);
+  --bg-url: url(./img/mobileDarkMode.svg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
   --highlight-color: rgba(255, 255, 255, 0.2);
-  --switch-bg-url: url(..//img/moon-stars.svg);
+  --switch-bg-url: url(.//img/moon-stars.svg);
 }
 
 .light {
   --text-color: black;
-  --bg-url: url(../img/mobileLightMode.svg);
+  --bg-url: url(./img/mobileLightMode.svg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
-  --switch-bg-url: url(..//img/sun.svg);
+  --switch-bg-url: url(.//img/sun.svg);
 }
 
 body {
@@ -76,11 +76,19 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+  animation: slide-out 0.3s;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in 0.3s forwards;
+}
+
+.light #switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -163,9 +171,28 @@ footer {
 
 @media (min-width: 700px) {
   :root{
-    --bg-url: url(../img/darkMode.svg);
+    --bg-url: url(./img/darkMode.svg);
   }
   .light {
-    --bg-url: url(../img/lightMode.svg);
+    --bg-url: url(./img/lightMode.svg);
+  }
+}
+
+
+@keyframes slide-in {
+  from{
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from{
+    left: 50%;
+  }
+  to {
+    left: 0;
   }
 }
