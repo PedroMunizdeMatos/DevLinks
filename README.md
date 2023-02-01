@@ -18,6 +18,10 @@ Reproduzi este projeto através do programa exclusivo e gratuito, promovido pela
 
 <br>
 
+<p align="center">
+  <img alt="projeto DevLinks" src=".github/preview.png" width="100%">
+</p>
+
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
