@@ -5,6 +5,7 @@
 }
 
 :root {
+  /* cores e estilos comuns ou facilmente reutilizáveis por toda a folha de estilo */
   --text-color: white;
   --bg-url: url(../img/mobileDarkMode.svg);
   --stroke-color: rgba(255, 255, 255, 0.5);
