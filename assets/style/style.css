@@ -16,6 +16,7 @@
 }
 
 .light {
+  /* alterações ao utilizar o toggle light */
   --text-color: black;
   --bg-url: url(../img/mobileLightMode.svg);
   --stroke-color: rgba(0, 0, 0, 0.5);
